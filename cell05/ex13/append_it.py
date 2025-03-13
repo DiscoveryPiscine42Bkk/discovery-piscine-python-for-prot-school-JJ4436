@@ -3,7 +3,9 @@ if len(sentence) == 0:
     print("none")
 else:
     word_with_ism = []
-    for x in range(len(sentence)):
-        if not "ism" in sentence[x]:
+    x = 0
+    while x < len(sentence):
+        if "ism" not in sentence[x]:
             word_with_ism.append(sentence[x] + "ism")
-print(*word_with_ism, sep="\n")
+        x += 1
+    print(*word_with_ism, sep="\n")
