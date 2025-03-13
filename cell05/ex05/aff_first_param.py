@@ -1,7 +1,10 @@
 user_input = input().split('" "')
-user_inputs = [user_inputs.replace("'","").replace('"',"") for user_inputs in user_input]
+i = 0
+while i < len(user_input):
+    user_input[i] = user_input[i].replace("'", "").replace('"', "")
+    i += 1
 
-if len(user_inputs) == 0:
+if len(user_input) == 0:
     print("none")
 else:
-    print(user_inputs[0])
+    print(user_input[0])
